@@ -2,7 +2,19 @@
 footer {
     background-color: $color-F-L-B;
     color: $color-G-L;
-    padding: 9rem 10rem 9rem 30rem;
+    padding: 10rem 10rem 10rem 20rem;
+
+    @include mq('small-screen-1') {
+        padding: 9rem 5rem 7rem 7rem;
+    }
+
+    @include mq('small-screen-2') {
+        padding: 9rem 5rem 7rem 7rem;
+    }
+    
+    @include mq('small-screen-3') {
+        padding: 9rem 5rem 7rem 7rem;
+    }
 
     @include clearfix();
     
@@ -14,12 +26,21 @@ footer {
         text-transform: uppercase;
         float: left;
 
+        @include mq('small-screen-3') {
+            margin-right: 6rem;
+            width: 20%;
+        }
+
     }
 
     #copyright {
         width: 75%;
         font-size: 1.2rem;
         float: left;
+
+        @include mq('small-screen-3') {
+            width: 60%;
+        }
 
         p:nth-child(1){
             margin-bottom: 2rem;

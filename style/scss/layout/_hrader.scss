@@ -1,46 +1,79 @@
 header {
-    width: 100%;
-    height: 90vh;
-    background-image: linear-gradient(to right, $color-B 0%, $color-L-B 100%),
-      url(../images/coffee-3-1.jpg); //style 안에 이미지 폴더가 있어야함
-    background-blend-mode: multiply;
-    background-size: cover; //사진이 꽉차게
-    position: relative;
-  
-    #logo-text {
-      position: absolute;
-      left: 1rem; // 70px
-      top: 1rem; // 40px
-      width: 6rem;
+  width: 100%;
+  height: 90vh;
+  background-image: linear-gradient(to right, $color-B 0%, $color-L-B 100%),
+    url(../images/coffee-3-1.jpg); //style 안에 이미지 폴더가 있어야함
+  background-blend-mode: multiply;
+  background-size: cover; //사진이 꽉차게
+  position: relative;
+
+  @include mq("small-screen-1") {
+    background-position: center;
+  }
+  @include mq("small-screen-2") {
+    background-position: center;
+  }
+  @include mq("small-screen-3") {
+    background-position: center;
+  }
+
+  #logo-text {
+    position: absolute;
+    left: 1rem; // 70px
+    top: 1rem; // 40px
+    width: 6rem;
+    animation-name: moveInLeft;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-fill-mode: backwards; //안보였다가 2초 뒤 시작
+  }
+
+  #header-text {
+    position: absolute;
+    left: 7rem;
+    bottom: 15%;
+    color: $color-W;
+    letter-spacing: -0.1rem; //글자간격
+    font-weight: 700;
+
+    &-main {
+      font-size: 7.2rem;
+      line-height: 7.2rem;
+      animation-name: moveInRight;
+      animation-duration: 2s;
+      animation-delay: 1s;
+      animation-fill-mode: backwards; //안보였다가 2초 뒤 시작
+
+      @include mq("small-screen-1") {
+        font-size: 6rem;
+      }
+
+      @include mq("small-screen-2") {
+        font-size: 4.5rem;
+      }
+
+      @include mq("small-screen-3") {
+        font-size: 3.8rem;
+      }
+    }
+    &-sub {
+      margin-top: 3rem;
+      font-size: 2.4rem;
       animation-name: moveInLeft;
       animation-duration: 2s;
-      animation-delay: 2s;
+      animation-delay: 1.5s;
       animation-fill-mode: backwards; //안보였다가 2초 뒤 시작
-    }
-  
-    #header-text {
-      position: absolute;
-      left: 7rem;
-      bottom: 15%;
-      color: $color-W;
-      letter-spacing: -0.1rem; //글자간격
-      font-weight: 700;
-      &-main {
-        font-size: 7.2rem;
-        line-height: 7.2rem;
-        animation-name: moveInRight;
-        animation-duration: 2s;
-        animation-delay: 1s;
-        animation-fill-mode: backwards; //안보였다가 2초 뒤 시작
+      @include mq("small-screen-1") {
+        font-size: 2rem;
       }
-      &-sub {
-        margin-top: 3rem;
-        font-size: 2.4rem;
-        animation-name: moveInLeft;
-        animation-duration: 2s;
-        animation-delay: 1.5s;
-        animation-fill-mode: backwards; //안보였다가 2초 뒤 시작
+
+      @include mq("small-screen-2") {
+        font-size: 1.7rem;
+      }
+
+      @include mq("small-screen-3") {
+        font-size: 1.5rem;
       }
     }
   }
-  
+}
