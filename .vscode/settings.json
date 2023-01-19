@@ -1,0 +1,21 @@
+{
+    "liveSassCompile.settings.generateMap": false,
+    "liveSassCompile.settings.includeItems": ["/style/scss/*.scss"],
+    "liveSassCompile.settings.formats": [
+      {
+        "format": "expanded",
+        "extensionName": ".css",
+        "savePath": "~/../css" //폴더생성
+      },
+      {
+        "format": "compressed",
+        "extensionName": ".min.css",
+        "savePath": "~/../min.css"
+      }
+    ],
+    "liveSassCompile.settings.autoprefix": [
+
+        
+    ],
+    "liveServer.settings.port": 5502
+  }

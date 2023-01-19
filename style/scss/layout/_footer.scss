@@ -1,0 +1,37 @@
+
+footer {
+    background-color: $color-F-L-B;
+    color: $color-G-L;
+    padding: 9rem 10rem 9rem 30rem;
+
+    @include clearfix();
+    
+    #logo-text-tooter {
+        width: 25%;
+        font-size: 4rem;
+        font-family: 'Lato', sans-serif ;
+        font-weight: 100;
+        text-transform: uppercase;
+        float: left;
+
+    }
+
+    #copyright {
+        width: 75%;
+        font-size: 1.2rem;
+        float: left;
+
+        p:nth-child(1){
+            margin-bottom: 2rem;
+            word-break: 2rem;
+            text-align: justify;
+
+            column-count: 3;
+            column-gap: 3rem;
+            column-rule-style: dashed;
+            column-rule-width: 1px;
+            column-rule-color: #888 ;
+            column-width: 1rem;
+        }
+    }
+}
