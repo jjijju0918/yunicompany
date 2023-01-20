@@ -15,12 +15,18 @@
     }
 
     @else if $screen-width == 'small-screen-2' {
-        @media screen and (min-width: 701px) and (max-width:899px) {
+        @media screen and (min-width: 601px) and (max-width:899px) {
             @content;
         }
     }
     @else if $screen-width == 'small-screen-3' {
-        @media screen and (max-width:700px) {
+        @media screen and (min-width:545px) and (max-width:600px) {
+            @content;
+        }
+    }
+
+    @else if $screen-width == 'small-screen-4' {
+        @media screen and (max-width:544px)  {
             @content;
         }
     }
